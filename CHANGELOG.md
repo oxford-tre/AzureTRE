@@ -24,6 +24,7 @@ ENHANCEMENTS:
 * Migration to Pydantic v2: Updates codebase to be compatible with Pydantic v2 for future FastAPI upgrades ([#4637](https://github.com/microsoft/AzureTRE/issues/4637))
 
 BUG FIXES:
+* Fix OHDSI bundle builds by moving to Debian Bookworm and installing a checksum-verified Go `sqlcmd` release. (`tre-workspace-service-ohdsi` 0.3.10) ([#5083](https://github.com/microsoft/AzureTRE/issues/5083))
 * Add `bx-msedge.net.` and `vsassets.io.` to the default DNS allowlist. Allow Nexus downloads from `*.gallery.vsassets.io` and `*.gallerycdn.vsassets.io` when DNS security policy is enabled. (`core` 0.16.18, `tre-shared-service-sonatype-nexus` 3.10.3) ([#5065](https://github.com/microsoft/AzureTRE/issues/5065))
 * Mark secret parameters in porter.yaml as `sensitive: true` to prevent secrets from appearing in debug logs ([#5011](https://github.com/microsoft/AzureTRE/issues/5011))
 * Ignore changes to `ip_tags` on public IP resources to unblock deployments where these tags are set by Azure policy. (`core` 0.16.17, `tre-shared-service-certs` 0.7.11) ([#5019](https://github.com/microsoft/AzureTRE/issues/5019))
